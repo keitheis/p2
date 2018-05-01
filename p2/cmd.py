@@ -74,7 +74,7 @@ def run_commands(callback_commands):
     for command in callback_commands:
         print(command)
         call(command, shell=True)
-    print("FIGHT!")
+    print("CONTINUE?")
 
 
 def scan_dir(path):
@@ -144,14 +144,18 @@ def main():
     change_flag = True
     while 1:
         if change_flag:
-            print("CONTINUE?")
+            print("FIGHT!")
             run_commands(callback_commands)
         change_flag = udpate_mtime(monitored_files)
         time.sleep(1)
 
 
-if __name__ == '__main__':
+def script_entrypoint():
     try:
         main()
     except KeyboardInterrupt as e:
-        print("bye")
+        print("GAMEOVER")
+
+
+if __name__ == '__main__':
+    script_entrypoint()

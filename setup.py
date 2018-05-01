@@ -9,7 +9,7 @@ with open(os.path.join(here, 'README.rst')) as f:
 
 setup(
     name='p2',
-    version='1.0.0',
+    version='1.0.1',
     description='Rerun command by watching modified file',
     long_description=README,
     url='https://github.com/keitheis/p2',
@@ -31,7 +31,7 @@ setup(
     install_requires=[''],
     entry_points={
         'console_scripts': [
-            'p2=p2.cmd:main',
+            'p2=p2.cmd:script_entrypoint',
         ],
     },
 )
