@@ -9,7 +9,7 @@ with open(os.path.join(here, 'README.rst')) as f:
 
 setup(
     name='p2',
-    version='0.9.9',
+    version='1.0.0',
     description='Rerun command by watching modified file',
     long_description=README,
     url='https://github.com/keitheis/p2',
