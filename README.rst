@@ -7,6 +7,18 @@ p2: Rerun command when given filed changed
 .. code-block:: sh
 
   % p2 'make' *.plim static/*.scss
+  Player Two is watching about 6 files [ base.plim content.plim index.plim oldcontent.plim oldindex.plim static/index.scss].
+  CONTINUE?
+  make
+  python -mscss < static/index.scss > static/index.css
+  plimc -H -o index.html index.plim
+  FIGHT!
+  content.plim changed
+  CONTINUE?
+  make
+  python -mscss < static/index.scss > static/index.css
+  plimc -H -o index.html index.plim
+  FIGHT!
 
 Installation
 ------------
