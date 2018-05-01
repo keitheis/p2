@@ -11,6 +11,7 @@ import sys
 import logging
 import time
 from subprocess import call
+from pprint import pformat
 
 _ignore_targets = []
 _ignore_extensions = ['pyc', 'swp', 'swo',
@@ -136,8 +137,8 @@ def main():
     argstr = ''
     for i in range(2, len(sys.argv)):
         argstr += ' %s' % sys.argv[i]
-    print("Player Two is watching about %d files [%s]. " % (
-        len(monitored_files), argstr)
+    print("Player Two is watching about %d files:\n%s" % (
+        len(monitored_files), pformat(argstr))
     )
 
     # run commands right away for first time executed
