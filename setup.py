@@ -1,10 +1,17 @@
+import os
+
 from setuptools import setup, find_packages
+
+here = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(here, 'README.rst')) as f:
+    README = f.read()
 
 
 setup(
     name='p2',
-    version='1.0.0',
+    version='0.9.9',
     description='Rerun command by watching modified file',
+    long_description=README,
     url='https://github.com/keitheis/p2',
     author='Keith Yang',
     author_email='yang@keitheis.org',
